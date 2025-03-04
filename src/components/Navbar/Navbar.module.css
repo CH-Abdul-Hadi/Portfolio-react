@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 3rem ;
+  /* margin-left: 3rem; */
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    gap: 1rem;
+}
