@@ -1,0 +1,24 @@
+.hero{
+    padding-top: 5rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between;/ */
+    gap: 1rem;
+
+}
+.herobtns{
+    display: flex;
+    gap: 1rem;
+}
+
+.profileImg{
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    border-radius: 50rem;
+    -webkit-border-radius: 50rem;
+    -moz-border-radius: 50rem;
+    -ms-border-radius: 50rem;
+    -o-border-radius: 50rem;
+}
