@@ -1,0 +1,27 @@
+.aboutMe{
+    height: 100vh;
+}
+.abouthead{
+    text-align: center;
+    color: wheat;
+    font-size: 33px;
+    padding-top: 2rem;
+}
+.aboutImg{
+    border-radius: 1rem;
+    border: none;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.aboutMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 2rem; */
+}
+
+.aboutText{
+    width: 50rem;
+}
