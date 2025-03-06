@@ -53,3 +53,10 @@
 .skillhead {
   padding-bottom: 1rem;
 }
+.exp{
+    position: absolute;
+    bottom: -37rem;
+    left:22rem;
+    display: flex;
+    gap: 1rem;
+}

@@ -8,6 +8,7 @@ import js from "../../assets/js.svg";
 import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 import wordpress from "../../assets/wordpress.svg";
+import Experience from "../experience/Experience";
 
 function AboutMe() {
   return (
@@ -46,6 +47,11 @@ function AboutMe() {
             <SkillCard skill={vite} />
             <SkillCard skill={wordpress} />
           </div>
+        </div>
+        <div className={style.exp}>
+          <Experience expTitle='Contributions' expNum='3' />
+          <Experience expTitle='Projects' expNum='32' />
+          <Experience expTitle='Certificates' expNum='3' />
         </div>
       </div>
     </>

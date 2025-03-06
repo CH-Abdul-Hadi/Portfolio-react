@@ -1,0 +1,9 @@
+.exp{
+    width: 14rem;
+    border-right: 3px solid ;
+    border-color: rgb(159, 194, 224);
+    /* align-items: center; */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
