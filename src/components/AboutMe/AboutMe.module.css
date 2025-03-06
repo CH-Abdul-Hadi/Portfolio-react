@@ -1,27 +1,55 @@
-.aboutMe{
-    height: 100vh;
+.aboutMe {
+  height: 100vh;
 }
-.abouthead{
-    text-align: center;
-    color: wheat;
-    font-size: 33px;
-    padding-top: 2rem;
+.abouthead {
+  text-align: center;
+  color: wheat;
+  font-size: 33px;
+  padding-top: 2rem;
 }
-.aboutImg{
-    border-radius: 1rem;
-    border: none;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+.aboutImg {
+  position: relative;
+  left: 7rem;
+  top: 6rem;
+  border-radius: 1rem;
+  border: none;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
-.aboutMain{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* gap: 2rem; */
+.aboutMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 2rem; */
 }
 
-.aboutText{
-    width: 50rem;
+.aboutText {
+  width: 50rem;
+  font-size: 22px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.mySkills {
+  display: flex;
+  width: 30rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(102, 102, 102, 0.226);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.skillimg {
+  position: absolute;
+  left: 29rem;
+}
+.skillhead {
+  padding-bottom: 1rem;
 }
