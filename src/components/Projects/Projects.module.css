@@ -6,10 +6,11 @@
     color: wheat;
     font-size: 33px;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-.projectsCard{
-    padding-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+/* .projectsCard{ */
+    /* padding-top: 3rem; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+/* } */

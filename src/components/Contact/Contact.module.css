@@ -1,0 +1,9 @@
+.contactMain{
+    height: 100vh;
+}
+.contactHead{
+    text-align: center;
+    color: wheat;
+    font-size: 33px;
+    padding-top: 2rem;
+}
