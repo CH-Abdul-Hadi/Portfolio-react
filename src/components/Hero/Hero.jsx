@@ -15,7 +15,7 @@ function Hero() {
         Saylani Mass IT Training Center Peshawar
       </p>
       <div className={style.herobtns} >
-      <Button btn='Connect with me' />
+      <Button btn='Connect Me' />
       <Button btn="My Resume"  />
       {/* <Button btn='My Resume' btnstyle={{backgroundColor:"black"}} /> */}
       </div>

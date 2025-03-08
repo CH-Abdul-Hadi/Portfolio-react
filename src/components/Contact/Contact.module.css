@@ -1,9 +1,17 @@
 .contactMain{
-    height: 100vh;
+    height: calc(100vh - 4rem);
 }
 .contactHead{
     text-align: center;
     color: wheat;
     font-size: 33px;
     padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.contactContent{
+    display: flex;
+    justify-content: space-around;
+}
+.contactText{
+    width: 30rem;
 }

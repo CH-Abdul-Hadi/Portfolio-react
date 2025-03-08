@@ -14,7 +14,7 @@ function Navbar() {
           <li>Portfolio</li>
           <li>Contact</li>
         </ul>
-        <Button btn="Connect with me"/>
+        <Button btn="Connect Me"/>
       </div>
     </>
   );
