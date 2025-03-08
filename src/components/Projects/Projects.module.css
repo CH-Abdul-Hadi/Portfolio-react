@@ -1,0 +1,15 @@
+.Projects{
+    height: 100vh;
+}
+.projecthead{
+    text-align: center;
+    color: wheat;
+    font-size: 33px;
+    padding-top: 2rem;
+}
+.projectsCard{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
