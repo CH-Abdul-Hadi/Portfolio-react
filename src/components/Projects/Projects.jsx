@@ -1,25 +1,14 @@
 import React from "react";
 import style from "./Projects.module.css";
-import Card from "../Projecs_cards/Card";
-import profile from "../../assets/Profile_img.jpg";
 import Slider from "../Slider/Slider";
 
 function Projects() {
   return (
     <>
-      <div className={style.Projects}>
+      <div className={style.Projects} id="projects">
         <h1 className={style.projecthead}>Projects</h1>
-        {/* <div className={style.projectsCard}>
-          <Card imgTitle='' image={profile}/>
-          <Card />
-          <Card />
-        </div>
-        <div className={style.projectsCard}>
-          <Card />
-          <Card />
-          <Card />
-        </div> */}
-        <Slider/>
+
+        <Slider />
       </div>
     </>
   );

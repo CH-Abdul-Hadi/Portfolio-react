@@ -1,17 +1,28 @@
-.contactMain{
-    height: calc(100vh - 4rem);
+.contactMain {
+  height: calc(100vh - 4rem);
 }
-.contactHead{
-    text-align: center;
-    color: wheat;
-    font-size: 33px;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+.contactHead {
+  text-align: center;
+  color: wheat;
+  font-size: 33px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
-.contactContent{
-    display: flex;
-    justify-content: space-around;
+.contactContent {
+  display: flex;
+  justify-content: space-around;
 }
-.contactText{
-    width: 30rem;
+.contactText {
+  width: 30rem;
+  font-size: 22px;
+  font-family: monospace;
+  /* display: flex; */
+  padding-top: 10px;
+}
+.contactGet {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
 }

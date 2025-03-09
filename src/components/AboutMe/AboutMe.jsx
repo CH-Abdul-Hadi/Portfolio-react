@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./AboutMe.module.css";
-import profileImg from "../../assets/Profile_img.jpg";
+import profileImg from "../../assets/Profile_img.webp";
 import SkillCard from "../skillCard/SkillCard";
 import html5 from "../../assets/html-5.svg";
 import css from "../../assets/css.svg";
@@ -13,7 +13,7 @@ import Experience from "../experience/Experience";
 function AboutMe() {
   return (
     <>
-      <div className={style.aboutMe}>
+      <div className={style.aboutMe} id="about">
         <h1 className={style.abouthead}>About Me</h1>
         <div className={style.aboutMain}>
           <img

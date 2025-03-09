@@ -15,3 +15,29 @@
     font-size: 20px;
     gap: 1rem;
 }
+.navLink {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: wheat;
+}
+
+/* Optional underline effect for active link */
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  /* background-color: ; */
+}
+
+.contactLink {
+  text-decoration: none;
+}  

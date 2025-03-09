@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Slider.css";
+import dashboard from '../../assets/dashboard.webp'
 
 const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(3);
@@ -19,7 +20,7 @@ const Slider = () => {
       title: "City Lights",
     },
     {
-      image: "https://source.unsplash.com/random/800x600?technology",
+      image: dashboard,
       title: "Tech World",
     },
     {

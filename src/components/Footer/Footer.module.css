@@ -1,4 +1,6 @@
 .footer{
     height: 4rem;
-    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
