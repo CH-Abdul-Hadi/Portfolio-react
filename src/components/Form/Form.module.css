@@ -1,35 +1,31 @@
+.formContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  font-family: inherit;
-  gap: 10px;
-  padding-inline: 2em;
-  padding-bottom: 0.4em;
+  gap: 1rem;
+  padding: 1.5rem;
   background-color: #171717;
   border-radius: 20px;
-  width: 30rem;
+  width: 100%;
 }
 
 .formHeading {
   text-align: center;
-  margin: 2em;
+  margin: 1rem 0;
   color: wheat;
-  font-size: 1.2em;
-  background-color: transparent;
-  align-self: center;
+  font-size: 1.5rem;
 }
 
 .formField {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
   border-radius: 10px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
-  color: white;
+  padding: 0.8rem;
   background-color: #171717;
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
@@ -40,54 +36,85 @@
   outline: none;
   width: 100%;
   color: #ccd6f6;
-  padding-inline: 1em;
+  font-size: 1rem;
+  min-width: 0; /* Prevent overflow */
+}
+
+textarea.inputField {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .sendMessageBtn {
   cursor: pointer;
-  margin-bottom: 3em;
-  padding: 1em;
+  padding: 1rem;
   border-radius: 10px;
   border: none;
-  outline: none;
   background-color: transparent;
   color: wheat;
   font-weight: bold;
-  outline: 1px solid wheat;
-  transition: all ease-in-out 0.3s;
+  border: 1px solid wheat;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
-.sendMessageBtn:hover {
-  transition: all ease-in-out 0.3s;
-  background-color: wheat;
-  /* background-color: wheat; */
-  color: #000;
-  cursor: pointer;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+/* Hover effects for desktop only */
+@media (hover: hover) {
+  .sendMessageBtn:hover {
+    background-color: wheat;
+    color: #000;
+  }
+
+  .formCard1:hover {
+    box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+  }
+}
+
+.sendMessageBtn:active {
+  transform: scale(0.98);
 }
 
 .formCard1 {
-  /* background-image: linear-gradient(163deg, wheat 0%, wheat 100%); */
-  /* background-image: linear-gradient(
-    267deg,
-    #da7c25 0.36%,
-    #b923e1 102.06%
-  ) !important; */
-
   border-radius: 22px;
   transition: all 0.3s;
 }
 
-.formCard1:hover {
-  box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .form {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .formHeading {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+
+  .formField {
+    padding: 0.6rem;
+  }
+
+  .sendMessageBtn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
 }
 
-.formCard2 {
-  border-radius: 0;
-  transition: all 0.2s;
-}
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 0.5rem;
+  }
 
-.formCard2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
+  .formHeading {
+    font-size: 1.2rem;
+  }
+
+  .inputField {
+    font-size: 0.9rem;
+  }
+
+  textarea.inputField {
+    min-height: 80px;
+  }
 }

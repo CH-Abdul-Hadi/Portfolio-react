@@ -2,24 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 3rem ;
+  padding: 0 2rem;
   height: 5rem;
-  /* margin-left: 3rem; */
+  position: relative;
+  /* background:; */
+}
+
+.logoImg {
+  width: 140px;
+  height: auto;
 }
 
 .navMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 20px;
-    gap: 1rem;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  transition: all 0.3s ease;
 }
+
 .navLink {
   text-decoration: none;
   color: #666;
   transition: color 0.3s ease;
   position: relative;
+  font-size: 1rem;
 }
 
 .navLink:hover,
@@ -27,17 +33,97 @@
   color: wheat;
 }
 
-/* Optional underline effect for active link */
-.navLink.active::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  /* background-color: ; */
+.contactBtn {
+  display: block;
 }
 
-.contactLink {
-  text-decoration: none;
-}  
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #666;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 5rem;
+    left: -100%;
+    flex-direction: column;
+    background: #161513;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .contactBtn {
+    display: none;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navMenu {
+    gap: 1rem;
+  }
+
+  .logoImg {
+    width: 120px;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional: Smaller Mobile Screens */
+@media (max-width: 480px) {
+  .logoImg {
+    width: 100px;
+  }
+
+  .navMenu {
+    top: 4rem;
+    padding: 1rem 0;
+  }
+}

@@ -1,43 +1,60 @@
 import { useState } from "react";
 import "./Slider.css";
-import dashboard from '../../assets/dashboard.webp'
+import dashboard from "../../assets/dashboard.webp";
+import myReact from "../../assets/reactfirst.webp";
+import foodpanda from "../../assets/foodpanda.webp";
+import clinic from "../../assets/clinic.webp";
+import ecomerrs from "../../assets/ecomerrs.webp";
+import netflix from "../../assets/netflix.webp";
+import techpro from "../../assets/techpro.webp";
+import rps from "../../assets/rps.webp";
+import tictac from "../../assets/tictac.webp";
 
 const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(4);
 
-  // Array of slide objects with different images
   const slides = [
+    // ... keep your existing slides array
+
     {
-      image: "https://source.unsplash.com/random/800x600?nature,water",
-      title: "Nature & Water",
+      image: techpro,
+      title: "Deep Forest",
     },
     {
-      image: "https://source.unsplash.com/random/800x600?mountain",
+      image: foodpanda,
       title: "Mountain View",
     },
+
     {
-      image: "https://source.unsplash.com/random/800x600?city,night",
+      image: rps,
+      title: "Space Exploration",
+    },
+
+    {
+      image: clinic,
+      title: "Nature & Water",
+    },
+
+    {
+      image: ecomerrs,
+      title: "Wild Animals",
+    },
+    {
+      image: myReact,
       title: "City Lights",
+    },
+
+    {
+      image: tictac,
+      title: "Wild Animals",
+    },
+    {
+      image: netflix,
+      title: "Wild Animals",
     },
     {
       image: dashboard,
       title: "Tech World",
-    },
-    {
-      image: "https://source.unsplash.com/random/800x600?space,galaxy",
-      title: "Space Exploration",
-    },
-    {
-      image: "https://source.unsplash.com/random/800x600?forest",
-      title: "Deep Forest",
-    },
-    {
-      image: "https://source.unsplash.com/random/800x600?animal,wild",
-      title: "Wild Animals",
-    },
-    {
-      image: "https://source.unsplash.com/random/800x600?animal,wild",
-      title: "Wild Animals",
     },
   ];
 
@@ -65,12 +82,12 @@ const Slider = () => {
     if (index > activeIndex) {
       stt = index - activeIndex;
       style.transform = `translateX(${280 * stt}px) scale(${
-        1 - 0.1 * stt
+        0.8 - 0.1 * stt
       }) perspective(16px) rotateY(-1deg)`;
     } else {
       stt = activeIndex - index;
       style.transform = `translateX(${-280 * stt}px) scale(${
-        1 - 0.1 * stt
+        0.8 - 0.1 * stt
       }) perspective(16px) rotateY(1deg)`;
     }
 
@@ -84,27 +101,22 @@ const Slider = () => {
   return (
     <div className="slider">
       {slides.map((slide, index) => (
-        <div
-          key={index}
-          className="item"
-          style={{
-            ...calculateStyle(index),
-            backgroundImage: `url(${slide.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <div key={index} className="item" style={calculateStyle(index)}>
+          <div className="image-container">
+            <img src={slide.image} alt={slide.title} />
+          </div>
           <div className="content">
-            <h1>{slide.title}</h1>
+            <h2>{slide.title}</h2>
+            <button className="cardBtn">Learn More</button>
           </div>
         </div>
       ))}
 
-      <button id="next" onClick={handleNext}>
-        &gt;
-      </button>
-      <button id="prev" onClick={handlePrev}>
+      <button className="nav-btn prev" onClick={handlePrev}>
         &lt;
+      </button>
+      <button className="nav-btn next" onClick={handleNext}>
+        &gt;
       </button>
     </div>
   );

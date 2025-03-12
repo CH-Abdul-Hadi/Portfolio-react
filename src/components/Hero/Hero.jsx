@@ -16,9 +16,8 @@ function Hero() {
         Saylani Mass IT Training Center Peshawar
       </p>
       <div className={style.herobtns} >
-      <a href="#contact"><Button btn='Connect Me'  /></a>
+      <a href="#contact"><Button btn='Contact Me'  /></a>
       <Button btn="My Resume"  />
-      {/* <Button btn='My Resume' btnstyle={{backgroundColor:"black"}} /> */}
       </div>
       </div>
     </>

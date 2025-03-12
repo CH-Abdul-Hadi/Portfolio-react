@@ -1,11 +1,49 @@
 .skill {
-  height: 5rem;
-  width: 5rem;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
-
+  padding: 1rem;
+  height: clamp(4rem, 8vw, 5rem);
+  width: clamp(4rem, 8vw, 5rem);
+  transition: all 0.3s ease;
 }
-.imgs:hover {
-  height: 4rem;
-  width: 4rem;
+
+.imgs {
+  height: clamp(2.5rem, 5vw, 3.5rem);
+  width: clamp(2.5rem, 5vw, 3.5rem);
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .imgs:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+}
+
+/* Mobile Tap Feedback */
+.imgs:active {
+  transform: scale(0.95);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .skill {
+    padding: 0.8rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .skill {
+    padding: 0.6rem;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .imgs {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
 }

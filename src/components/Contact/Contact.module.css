@@ -1,22 +1,7 @@
-.contactMain {
-  height: calc(100vh - 4rem);
-}
-.contactHead {
-  text-align: center;
-  color: wheat;
-  font-size: 33px;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-.contactContent {
-  display: flex;
-  justify-content: space-around;
-}
 .contactText {
   width: 30rem;
   font-size: 22px;
   font-family: monospace;
-  /* display: flex; */
   padding-top: 10px;
 }
 .contactGet {
@@ -25,4 +10,87 @@
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
   font-weight: bold;
+}
+.contactMain {
+  min-height: calc(100vh - 4rem);
+  padding: 2rem 1rem;
+}
+
+.contactHead {
+  text-align: center;
+  color: wheat;
+  font-size: 2rem;
+  padding: 1rem 0 2rem;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.contactText {
+  width: 100%;
+  max-width: 30rem;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.contactGet {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 1rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) {
+  .contactContent {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .contactText {
+    text-align: left;
+    font-size: 1.1rem;
+    padding-top: 0;
+  }
+
+  .contactGet {
+    font-size: 2.5rem;
+  }
+
+  .formContainer {
+    width: 50%;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .contactHead {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .contactGet {
+    font-size: 3rem;
+  }
+
+  .contactText {
+    font-size: 1.2rem;
+  }
 }

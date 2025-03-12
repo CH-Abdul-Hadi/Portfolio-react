@@ -7,7 +7,6 @@ function Projects() {
     <>
       <div className={style.Projects} id="projects">
         <h1 className={style.projecthead}>Projects</h1>
-
         <Slider />
       </div>
     </>

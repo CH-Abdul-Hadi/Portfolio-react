@@ -1,62 +1,134 @@
+
 .aboutMe {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
 }
+
 .abouthead {
   text-align: center;
   color: wheat;
-  font-size: 33px;
-  padding-top: 2rem;
+  font-size: 2rem;
+  padding: 2rem 0;
 }
-.aboutImg {
-  position: relative;
-  left: 7rem;
-  top: 6rem;
-  border-radius: 1rem;
-  border: none;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
+
 .aboutMain {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  /* gap: 2rem; */
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.aboutImg {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
 .aboutText {
-  width: 50rem;
-  font-size: 22px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: justify;
+  width: 100%;
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1rem;
+  text-align: left;
 }
+
 .mySkills {
   display: flex;
-  width: 30rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(102, 102, 102, 0.226);
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
 }
+
 .skillimg {
-  position: absolute;
-  left: 29rem;
+  position: relative;
+  left: auto;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
 }
+
 .skillhead {
-  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-.exp{
-    position: absolute;
-    bottom: -37rem;
-    left:22rem;
-    display: flex;
-    gap: 1rem;
+
+.exp {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .aboutMain {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .aboutImg {
+    max-width: 300px;
+  }
+
+  .aboutText {
+    font-size: 1.1rem;
+  }
+
+  .skillhead {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .abouthead {
+    font-size: 2.5rem;
+  }
+
+  .aboutText {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .mySkills {
+    justify-content: space-between;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .abouthead {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+
+  .aboutText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .exp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skillhead {
+    font-size: 1.3rem;
+  }
 }

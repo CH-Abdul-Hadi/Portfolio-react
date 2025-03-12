@@ -62,7 +62,7 @@ function Navbar() {
         </li>
       </ul>
       <a href="#contact" className={style.contactLink}>
-        <Button btn="Connect Me"/>
+        <Button btn="Contact Me"/>
       </a>
     </nav>
   );

@@ -1,14 +1,16 @@
-import React from 'react'
-import style from './SkillCard.module.css'
+import React from "react";
+import style from "./SkillCard.module.css";
 
 function SkillCard(props) {
   return (
-    <>
-        <div className={style.skill}>
-            <img src={props.skill} className={style.imgs} width={50} height={50} alt="" />
-        </div>
-    </>
-  )
+    <div className={style.skill}>
+      <img
+        src={props.skill}
+        className={style.imgs}
+        alt={props.alt || "Skill icon"}
+      />
+    </div>
+  );
 }
 
-export default SkillCard
+export default SkillCard;

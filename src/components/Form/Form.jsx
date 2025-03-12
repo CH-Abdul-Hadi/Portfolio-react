@@ -6,7 +6,7 @@ const Form = () => {
     <>
       <div className={style.formcard1}>
         <div className={style.formcard2}>
-          <form className={style.form} >
+          <form className={style.form}>
             <p className={style.formHeading}>Get In Touch</p>
             <div className={style.formField}>
               <input
