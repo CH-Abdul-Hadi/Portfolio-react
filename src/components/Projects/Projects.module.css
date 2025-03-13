@@ -2,6 +2,7 @@
 .Projects {
     min-height: 100vh;
     padding: 2rem 1rem;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
   }

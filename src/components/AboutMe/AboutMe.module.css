@@ -1,7 +1,7 @@
-
 .aboutMe {
   min-height: 100vh;
   padding: 2rem 1rem;
+  padding-top: 0;
   position: relative;
 }
 
@@ -80,7 +80,7 @@
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
   .aboutImg {
     max-width: 300px;
   }
