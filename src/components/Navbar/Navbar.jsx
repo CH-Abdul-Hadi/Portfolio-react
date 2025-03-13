@@ -5,65 +5,95 @@ import Button from "../Button/Button";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState("#home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       setActiveLink(window.location.hash || "#home");
+      setIsMenuOpen(false);
     };
 
     // Set initial active link
     handleHashChange();
     
-    // Add hash change listener
     window.addEventListener("hashchange", handleHashChange);
-    
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
 
+  const handleLinkClick = (hash) => {
+    setActiveLink(hash);
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className={style.navbar}>
-      <a href="#home">
-        <img src={logo} alt="Company Logo" width={140} />
+      <a href="#home" className={style.logo}>
+        <img src={logo} alt="Company Logo" className={style.logoImg} />
       </a>
-      <ul className={style.navMenu}>
+
+      <div
+        className={`${style.hamburger} ${isMenuOpen ? style.active : ""}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <span className={style.bar}></span>
+        <span className={style.bar}></span>
+        <span className={style.bar}></span>
+      </div>
+
+      <ul className={`${style.navMenu} ${isMenuOpen ? style.active : ""}`}>
         <li>
-          <a 
-            href="#home" 
-            className={`${style.navLink} ${activeLink === "#home" ? style.active : ""}`}
+          <a
+            href="#home"
+            onClick={() => handleLinkClick("#home")}
+            className={`${style.navLink} ${
+              activeLink === "#home" ? style.active : ""
+            }`}
           >
             Home
           </a>
         </li>
         <li>
-          <a 
-            href="#about" 
-            className={`${style.navLink} ${activeLink === "#about" ? style.active : ""}`}
+          <a
+            href="#about"
+            onClick={() => handleLinkClick("#about")}
+            className={`${style.navLink} ${
+              activeLink === "#about" ? style.active : ""
+            }`}
           >
             About Me
           </a>
         </li>
         <li>
-          <a 
-            href="#projects" 
-            className={`${style.navLink} ${activeLink === "#projects" ? style.active : ""}`}
+          <a
+            href="#projects"
+            onClick={() => handleLinkClick("#projects")}
+            className={`${style.navLink} ${
+              activeLink === "#projects" ? style.active : ""
+            }`}
           >
             Projects
           </a>
         </li>
         <li>
-          <a 
-            href="#contact" 
-            className={`${style.navLink} ${activeLink === "#contact" ? style.active : ""}`}
+          <a
+            href="#contact"
+            onClick={() => handleLinkClick("#contact")}
+            className={`${style.navLink} ${
+              activeLink === "#contact" ? style.active : ""
+            }`}
           >
             Contact
           </a>
         </li>
       </ul>
-      <a href="#contact" className={style.contactLink}>
-        <Button btn="Contact Me"/>
-      </a>
+
+      <div className={style.contactBtn}>
+        <a href="#contact" onClick={() => handleLinkClick("#contact")}>
+          <Button btn="Contact Me" />
+        </a>
+      </div>
     </nav>
   );
 }

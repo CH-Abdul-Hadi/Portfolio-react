@@ -9,52 +9,69 @@ import netflix from "../../assets/netflix.webp";
 import techpro from "../../assets/techpro.webp";
 import rps from "../../assets/rps.webp";
 import tictac from "../../assets/tictac.webp";
+import Button2 from "../Button2/Button2";
 
 const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(4);
 
   const slides = [
-    // ... keep your existing slides array
-
     {
       image: techpro,
-      title: "Deep Forest",
+      title: "Tech Company",
+      para: "A modern website for a tech company.",
+      src: "https://tech-repo.vercel.app/",
     },
     {
       image: foodpanda,
-      title: "Mountain View",
+      title: "FoodPanda Clone",
+      para: "A food delivery web app inspired by FoodPanda.",
+      src: "https://foodpanda-clone-beige.vercel.app/",
     },
 
     {
       image: rps,
-      title: "Space Exploration",
+      title: "Rock Paper Scissors",
+      para: "A fun and interactive rock-paper-scissors.",
+      src: "https://rock-paper-scissors-xi-lilac.vercel.app/",
     },
 
     {
       image: clinic,
-      title: "Nature & Water",
+      title: "Clinic Management System",
+      para: "A comprehensive web application designed to streamline clinic operations",
+      src: "https://bddc.vercel.app/",
     },
 
     {
       image: ecomerrs,
-      title: "Wild Animals",
+      title: "E-commerce Website",
+      para: "A fully responsive e-commerce platform with product listings",
+      src: "https://project-main-delta.vercel.app/",
     },
     {
       image: myReact,
-      title: "City Lights",
+      title: "React project",
+      para: "An introductory React project highlighting.",
+      src: "https://first-react-project-indol.vercel.app/",
     },
 
     {
       image: tictac,
-      title: "Wild Animals",
+      title: "Tic-Tac-Toe Game",
+      para: "A classic tic-tac-toe game built with JavaScript",
+      src: "https://tic-tac-lilac.vercel.app/",
     },
     {
       image: netflix,
-      title: "Wild Animals",
+      title: "Netflix Clone",
+      para: "A sleek, responsive Netflix-inspired web app",
+      src: "https://netflix-alpha-five.vercel.app/",
     },
     {
       image: dashboard,
-      title: "Tech World",
+      title: "Admin Dashboard",
+      para: "An intuitive admin panel",
+      src: "https://dashboard-lyart-phi.vercel.app/",
     },
   ];
 
@@ -107,7 +124,10 @@ const Slider = () => {
           </div>
           <div className="content">
             <h2>{slide.title}</h2>
-            <button className="cardBtn">Learn More</button>
+            <p>{slide.para}</p>
+            <a href={slide.src} target="_blank">
+              <Button2 />
+            </a>
           </div>
         </div>
       ))}

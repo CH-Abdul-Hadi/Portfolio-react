@@ -9,6 +9,7 @@ import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 import wordpress from "../../assets/wordpress.svg";
 import Experience from "../experience/Experience";
+import bootstrapsicon from '../../assets/bootstrap.svg'
 
 function AboutMe() {
   return (
@@ -42,6 +43,7 @@ function AboutMe() {
           <div className={style.mySkills}>
             <SkillCard skill={html5} />
             <SkillCard skill={css} />
+            <SkillCard skill={bootstrapsicon} />
             <SkillCard skill={js} />
             <SkillCard skill={react} />
             <SkillCard skill={vite} />
