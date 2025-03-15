@@ -14,7 +14,7 @@ function App() {
     // Simulate loading (e.g., fetching data, preloading assets)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 2-second delay for demo; adjust as needed
+    }, 3000); // 2-second delay for demo; adjust as needed
 
     return () => clearTimeout(timer);
   }, []);
