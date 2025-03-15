@@ -7,18 +7,46 @@ function Navbar() {
   const [activeLink, setActiveLink] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Handle both hash changes and scroll position
   useEffect(() => {
+    // Handle hash changes (e.g., clicking links)
     const handleHashChange = () => {
-      setActiveLink(window.location.hash || "#home");
+      const hash = window.location.hash || "#home";
+      setActiveLink(hash);
       setIsMenuOpen(false);
+    };
+
+    // Handle scroll position
+    const handleScroll = () => {
+      const sections = ["home", "about", "projects", "contact"];
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (!element) continue;
+
+        const { offsetTop, offsetHeight } = element;
+        if (
+          scrollPosition >= offsetTop &&
+          scrollPosition < offsetTop + offsetHeight
+        ) {
+          setActiveLink(`#${section}`);
+          break;
+        }
+      }
     };
 
     // Set initial active link
     handleHashChange();
-    
+
+    // Add event listeners
     window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -36,6 +64,7 @@ function Navbar() {
       <div
         className={`${style.hamburger} ${isMenuOpen ? style.active : ""}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle navigation menu"
       >
         <span className={style.bar}></span>
         <span className={style.bar}></span>

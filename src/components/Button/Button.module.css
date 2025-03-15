@@ -35,14 +35,7 @@
   }
 }
 
-/* Desktop sizes */
-/* @media (min-width: 1024px) {
-  .btns {
-    padding: 1.2em 3em;
-    font-size: 1.4rem;
-    min-width: 160px;
-  }
-} */
+
 
 /* Mobile optimizations */
 @media (max-width: 480px) {
