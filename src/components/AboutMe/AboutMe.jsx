@@ -140,9 +140,11 @@ function AboutMe() {
   }, []);
 
   return (
-    <>
+    <section id="about">
       <div ref={aboutRef} className={style.aboutMe}>
-        <h1 className={style.abouthead} id="abouthead">About Me</h1>
+        <h1 className={style.abouthead} id="abouthead about">
+          About Me
+        </h1>
         <div className={style.aboutMain} id="aboutMain">
           <img
             src={profileImg}
@@ -154,17 +156,18 @@ function AboutMe() {
           <p className={style.aboutText} id="aboutText">
             I'm Abdul Hadi, a passionate Front-end Developer currently in my 6th
             semester of Computer Science at the University of Agriculture
-            Peshawar. <br />
-            I focus on crafting seamless and user-friendly web experiences. I'm
-            also diving deeper into MERN stack development at Saylani Mass IT
-            Training Centre, expanding my expertise in full-stack technologies.{" "}
-            <br />
+            Peshawar. <br />I focus on crafting seamless and user-friendly web
+            experiences. I'm also diving deeper into MERN stack development at
+            Saylani Mass IT Training Centre, expanding my expertise in
+            full-stack technologies. <br />
             With a keen eye for design and a love for clean code, I strive to
             build websites that are both functional and visually captivating.
           </p>
         </div>
         <div className={style.skillimg} id="skillimg">
-          <h1 className={style.skillhead} id="skillhead">My Skills</h1>
+          <h1 className={style.skillhead} id="skillhead">
+            My Skills
+          </h1>
           <div className={style.mySkills} id="mySkills">
             <SkillCard className="skillCard" skill={html5} />
             <SkillCard className="skillCard" skill={css} />
@@ -181,7 +184,7 @@ function AboutMe() {
           <Experience expTitle="Certificates" expNum="3" />
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

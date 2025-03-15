@@ -47,26 +47,31 @@ function Hero() {
   }, []);
 
   return (
-    <div className={style.hero}>
-      <img ref={imgRef} src={profile} alt="" className={style.profileImg} />
-      <h1>
-        I'm{" "}
-        <span ref={textRef} className={`${styleTextColor.contactGet} ${style.herotext}`}>
-          Front-End-Developer{" "}
-        </span>{" "}
-        based in Pakistan{" "}
-      </h1>
-      <p ref={paraRef}>
-        I have worked with Professionals and currently doing MERN stack from
-        Saylani Mass IT Training Center Peshawar
-      </p>
-      <div ref={btnsRef} className={style.herobtns}>
-        <a href="#contact">
-          <Button btn="Contact Me" />
-        </a>
-        <Button btn="My Resume" />
+    <section id="home">
+      <div className={style.hero}>
+        <img ref={imgRef} src={profile} alt="" className={style.profileImg} />
+        <h1>
+          I'm{" "}
+          <span
+            ref={textRef}
+            className={`${styleTextColor.contactGet} ${style.herotext}`}
+          >
+            Front-End-Developer{" "}
+          </span>{" "}
+          based in Pakistan{" "}
+        </h1>
+        <p ref={paraRef}>
+          I have worked with Professionals and currently doing MERN stack from
+          Saylani Mass IT Training Center Peshawar
+        </p>
+        <div ref={btnsRef} className={style.herobtns}>
+          <a href="#contact">
+            <Button btn="Contact Me" />
+          </a>
+          <Button btn="My Resume" />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

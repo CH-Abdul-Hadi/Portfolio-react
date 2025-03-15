@@ -7,19 +7,16 @@ function Navbar() {
   const [activeLink, setActiveLink] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Handle both hash changes and scroll position
   useEffect(() => {
-    // Handle hash changes (e.g., clicking links)
     const handleHashChange = () => {
       const hash = window.location.hash || "#home";
       setActiveLink(hash);
       setIsMenuOpen(false);
     };
 
-    // Handle scroll position
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -36,14 +33,10 @@ function Navbar() {
       }
     };
 
-    // Set initial active link
     handleHashChange();
-
-    // Add event listeners
     window.addEventListener("hashchange", handleHashChange);
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("scroll", handleScroll);

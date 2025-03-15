@@ -5,10 +5,12 @@ import Slider from "../Slider/Slider";
 function Projects() {
   return (
     <>
-      <div className={style.Projects} >
-        <h1 className={style.projecthead}>Projects</h1>
-        <Slider />
-      </div>
+      <section id="projects">
+        <div className={style.Projects}>
+          <h1 className={style.projecthead}>Projects</h1>
+          <Slider />
+        </div>
+      </section>
     </>
   );
 }

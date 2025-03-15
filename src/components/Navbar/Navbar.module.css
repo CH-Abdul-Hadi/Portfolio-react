@@ -5,6 +5,8 @@
   padding: 0 2rem;
   height: 5rem;
   position: relative;
+  background-color: #161513; 
+  z-index: 1000;
 }
 
 .logoImg {
@@ -15,13 +17,14 @@
 .navMenu {
   display: flex;
   gap: 2rem;
+  background-color: transparent; 
   list-style: none;
   transition: all 0.3s ease;
 }
 
 .navLink {
   text-decoration: none;
-  color: #666;
+  color: #ccc; /* Improved contrast on black background */
   transition: color 0.3s ease;
   position: relative;
   font-size: 1rem;
@@ -78,7 +81,7 @@
     top: 5rem;
     left: -100%;
     flex-direction: column;
-    background: #161513;
+    /* background: #000000; Black background for mobile menu */
     width: 100%;
     text-align: center;
     padding: 2rem 0;
@@ -115,7 +118,7 @@
   }
 }
 
-/* Optional: Smaller Mobile Screens */
+/* Smaller Mobile Screens */
 @media (max-width: 480px) {
   .logoImg {
     width: 100px;
@@ -123,15 +126,16 @@
 
   .navMenu {
     top: 4rem;
+    /* background:; Black background */
     padding: 1rem 0;
   }
 }
+
 .navLink.active {
   color: wheat !important;
   font-weight: 500;
 }
 
-/* Add underline animation */
 .navLink.active::after {
   content: "";
   display: block;
