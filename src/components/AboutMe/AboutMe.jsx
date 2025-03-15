@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./AboutMe.module.css";
 import profileImg from "../../assets/Profile_img.webp";
 import SkillCard from "../skillCard/SkillCard";
@@ -9,9 +9,88 @@ import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 import wordpress from "../../assets/wordpress.svg";
 import Experience from "../experience/Experience";
-import bootstrapsicon from '../../assets/bootstrap.svg'
+import bootstrapsicon from '../../assets/bootstrap.svg';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 function AboutMe() {
+  useEffect(() => {
+    // Header animation
+    gsap.from(".abouthead", {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      ease: "power3.out"
+    });
+
+    // About main section animation
+    gsap.from(".aboutMain", {
+      scrollTrigger: {
+        trigger: ".aboutMain",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      opacity: 0,
+      y: 100,
+      duration: 1.2,
+      ease: "power3.out"
+    });
+
+    // Image animation
+    gsap.from(".aboutImg", {
+      scrollTrigger: {
+        trigger: ".aboutMain",
+        start: "top 80%"
+      },
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      ease: "back.out(1.7)"
+    });
+
+    // Skills section animation
+    gsap.from(".skillhead", {
+      scrollTrigger: {
+        trigger: ".skillimg",
+        start: "top 80%"
+      },
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      ease: "power3.out"
+    });
+
+    // Skill cards animation (staggered)
+    gsap.from(".mySkills .skillCard", {
+      scrollTrigger: {
+        trigger: ".mySkills",
+        start: "top 80%"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+
+    // Experience section animation
+    gsap.from(".exp > *", {
+      scrollTrigger: {
+        trigger: ".exp",
+        start: "top 80%"
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      stagger: 0.3,
+      ease: "power2.out"
+    });
+
+  }, []);
+
   return (
     <>
       <div className={style.aboutMe} id="about">
@@ -27,9 +106,7 @@ function AboutMe() {
             I'm Abdul Hadi, a passionate Front-end Developer currently in my 6th
             semester of Computer Science at the University of Agriculture
             Peshawar. <br />
-            {/* Skilled in HTML, CSS, JavaScript, Bootstrap, React, and
-            WordPress, */}
-             I focus on crafting seamless and user-friendly web
+            I focus on crafting seamless and user-friendly web
             experiences. I'm also diving deeper into MERN stack development at
             Saylani Mass IT Training Centre, expanding my expertise in
             full-stack technologies. <br />
@@ -41,13 +118,13 @@ function AboutMe() {
         <div className={style.skillimg}>
           <h1 className={style.skillhead}>My Skills</h1>
           <div className={style.mySkills}>
-            <SkillCard skill={html5} />
-            <SkillCard skill={css} />
-            <SkillCard skill={bootstrapsicon} />
-            <SkillCard skill={js} />
-            <SkillCard skill={react} />
-            <SkillCard skill={vite} />
-            <SkillCard skill={wordpress} />
+            <SkillCard className="skillCard" skill={html5} />
+            <SkillCard className="skillCard" skill={css} />
+            <SkillCard className="skillCard" skill={bootstrapsicon} />
+            <SkillCard className="skillCard" skill={js} />
+            <SkillCard className="skillCard" skill={react} />
+            <SkillCard className="skillCard" skill={vite} />
+            <SkillCard className="skillCard" skill={wordpress} />
           </div>
         </div>
         <div className={style.exp}>
