@@ -6,7 +6,7 @@
   height: clamp(4rem, 8vw, 5rem);
   width: clamp(4rem, 8vw, 5rem);
   transition: all 0.3s ease;
-  will-change: transform, opacity; 
+  will-change: transform, opacity;
 }
 
 .imgs {
