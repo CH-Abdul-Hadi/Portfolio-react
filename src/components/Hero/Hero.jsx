@@ -51,7 +51,7 @@ function Hero() {
       <img ref={imgRef} src={profile} alt="" className={style.profileImg} />
       <h1>
         I'm{" "}
-        <span ref={textRef} className={styleTextColor.contactGet}>
+        <span ref={textRef} className={`${styleTextColor.contactGet} ${style.herotext}`}>
           Front-End-Developer{" "}
         </span>{" "}
         based in Pakistan{" "}
