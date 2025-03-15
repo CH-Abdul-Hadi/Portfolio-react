@@ -29,7 +29,7 @@ function Hero() {
       <h1>
         I'm{" "}
         <span ref={textRef} className={styleTextColor.contactGet}>
-          Front-End-Developer
+          Front-End-Developer{" "}
         </span>
         based in Pakistan{" "}
       </h1>
