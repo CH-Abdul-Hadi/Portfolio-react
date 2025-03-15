@@ -6,6 +6,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Loader2 from "./components/Loader2/Loader2";
 import "./index.css";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
           <AboutMe />
           <Projects/>
           <Contact />
-          
+          <Footer/>
         </>
       )}
     </div>
