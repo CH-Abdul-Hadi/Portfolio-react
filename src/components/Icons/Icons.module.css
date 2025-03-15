@@ -1,0 +1,29 @@
+.icons {
+  background-color: #161513;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.socialLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.socialIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgba(87, 86, 86, 0.623);
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover .socialIcon {
+  color: wheat;
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}

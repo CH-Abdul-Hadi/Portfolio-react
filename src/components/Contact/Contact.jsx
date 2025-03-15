@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Contact.module.css";
 import Form from "../Form/Form";
+import Icons from "../Icons/Icons";
 
 function Contact() {
   return (
@@ -17,7 +18,7 @@ function Contact() {
               free to drop me a message using the form below. I'll get back to
               you as soon as possible!
             </p>
-            <div className={style.icons}>{/* Keep your icon links */}</div>
+            <div className={style.icons}> <Icons/> </div>
           </div>
           <div className={style.formContainer}>
             <Form />

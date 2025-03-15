@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact";
 import Loader2 from "./components/Loader2/Loader2";
 import "./index.css";
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -30,6 +31,7 @@ function App() {
           <AboutMe />
           <Projects/>
           <Contact />
+          
         </>
       )}
     </div>
