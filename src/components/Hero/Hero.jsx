@@ -17,7 +17,7 @@ function Hero() {
   useEffect(() => {
     gsap.from(textRef.current, {
       text: "",
-      duration: 4,
+      duration: 2,
       ease: "none",
       delay: 0.5,
     });
@@ -29,8 +29,8 @@ function Hero() {
       <h1>
         I'm{" "}
         <span ref={textRef} className={styleTextColor.contactGet}>
-          Front-End-Developer{" "}
-        </span>
+          Front-End-Developer
+        </span>{" "}
         based in Pakistan{" "}
       </h1>
       <p ref={paraRef}>
