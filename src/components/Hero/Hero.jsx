@@ -16,8 +16,8 @@ function Hero() {
 
   useEffect(() => {
     gsap.from(textRef.current, {
-      text: "Front-End-Developer",
-      duration: 6,
+      text: "",
+      duration: 4,
       ease: "none",
       delay: 0.5,
     });
@@ -27,7 +27,10 @@ function Hero() {
     <div className={style.hero}>
       <img ref={imgRef} src={profile} alt="" className={style.profileImg} />
       <h1>
-        I'm <span ref={textRef} className={styleTextColor.contactGet}></span>
+        I'm{" "}
+        <span ref={textRef} className={styleTextColor.contactGet}>
+          Front-End-Developer
+        </span>
         based in Pakistan{" "}
       </h1>
       <p ref={paraRef}>
