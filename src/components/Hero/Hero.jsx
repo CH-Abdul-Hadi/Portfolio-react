@@ -18,13 +18,13 @@ function Hero() {
     gsap.from(imgRef.current, {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 2,
       ease: "power2.out",
     });
 
     gsap.from(textRef.current, {
       text: "",
-      duration: 2,
+      duration: 3,
       ease: "none",
       delay: 0.5,
     });
@@ -32,7 +32,7 @@ function Hero() {
     gsap.from(paraRef.current, {
       opacity: 0,
       y: 20,
-      duration: 1,
+      duration: 2,
       delay: 1,
       ease: "power2.out",
     });
@@ -40,7 +40,7 @@ function Hero() {
     gsap.from(btnsRef.current, {
       opacity: 0,
       y: 20,
-      duration: 1,
+      duration: 2,
       delay: 1.5,
       ease: "power2.out",
     });
