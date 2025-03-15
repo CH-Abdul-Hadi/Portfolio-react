@@ -15,11 +15,34 @@ function Hero() {
   const btnsRef = useRef(null);
 
   useEffect(() => {
+    gsap.from(imgRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+    });
+
     gsap.from(textRef.current, {
       text: "",
       duration: 2,
       ease: "none",
       delay: 0.5,
+    });
+
+    gsap.from(paraRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 1,
+      ease: "power2.out",
+    });
+
+    gsap.from(btnsRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 1.5,
+      ease: "power2.out",
     });
   }, []);
 
@@ -29,7 +52,7 @@ function Hero() {
       <h1>
         I'm{" "}
         <span ref={textRef} className={styleTextColor.contactGet}>
-          Front-End-Developer
+          Front-End-Developer{" "}
         </span>{" "}
         based in Pakistan{" "}
       </h1>
