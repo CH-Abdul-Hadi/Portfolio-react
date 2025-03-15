@@ -24,7 +24,7 @@ function AboutMe() {
     const ctx = gsap.context(() => {
       // Header animation (immediate)
       gsap.fromTo(
-        ".abouthead",
+        "#abouthead",
         { opacity: 0, y: -50 },
         {
           opacity: 1,
@@ -36,7 +36,7 @@ function AboutMe() {
 
       // About main section
       gsap.fromTo(
-        ".aboutMain",
+        "#aboutMain",
         { opacity: 0, y: 100 },
         {
           opacity: 1,
@@ -55,7 +55,7 @@ function AboutMe() {
 
       // Profile image
       gsap.fromTo(
-        ".aboutImg",
+        "#aboutImg",
         { opacity: 0, scale: 0.8 },
         {
           opacity: 1,
@@ -74,7 +74,7 @@ function AboutMe() {
 
       // Skills section header
       gsap.fromTo(
-        ".skillhead",
+        "#skillhead",
         { opacity: 0, x: -50 },
         {
           opacity: 1,
@@ -93,7 +93,7 @@ function AboutMe() {
 
       // Skill cards
       gsap.fromTo(
-        ".skillCard",
+        "#skillCard",
         { opacity: 0, y: 30, scale: 0.9 },
         {
           opacity: 1,
@@ -114,7 +114,7 @@ function AboutMe() {
 
       // Experience cards
       gsap.fromTo(
-        ".exp > div",
+        "#exp > div",
         { opacity: 0, y: 40 },
         {
           opacity: 1,
@@ -142,15 +142,16 @@ function AboutMe() {
   return (
     <>
       <div ref={aboutRef} className={style.aboutMe}>
-        <h1 className={style.abouthead}>About Me</h1>
-        <div className={style.aboutMain}>
+        <h1 className={style.abouthead} id="abouthead">About Me</h1>
+        <div className={style.aboutMain} id="aboutMain">
           <img
             src={profileImg}
             height={250}
+            id="aboutImg"
             className={style.aboutImg}
             alt=""
           />
-          <p className={style.aboutText}>
+          <p className={style.aboutText} id="aboutText">
             I'm Abdul Hadi, a passionate Front-end Developer currently in my 6th
             semester of Computer Science at the University of Agriculture
             Peshawar. <br />
@@ -162,9 +163,9 @@ function AboutMe() {
             build websites that are both functional and visually captivating.
           </p>
         </div>
-        <div className={style.skillimg}>
-          <h1 className={style.skillhead}>My Skills</h1>
-          <div className={style.mySkills}>
+        <div className={style.skillimg} id="skillimg">
+          <h1 className={style.skillhead} id="skillhead">My Skills</h1>
+          <div className={style.mySkills} id="mySkills">
             <SkillCard className="skillCard" skill={html5} />
             <SkillCard className="skillCard" skill={css} />
             <SkillCard className="skillCard" skill={bootstrapsicon} />
@@ -174,7 +175,7 @@ function AboutMe() {
             <SkillCard className="skillCard" skill={wordpress} />
           </div>
         </div>
-        <div className={style.exp}>
+        <div className={style.exp} id="exp">
           <Experience expTitle="Contributions" expNum="3" />
           <Experience expTitle="Projects" expNum="32" />
           <Experience expTitle="Certificates" expNum="3" />
