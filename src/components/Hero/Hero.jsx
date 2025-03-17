@@ -69,7 +69,9 @@ function Hero() {
           <a href="#contact">
             <Button btn="Contact Me" />
           </a>
-          <Button btn="My Resume" file={resume} />
+          <a href={resume}>
+            <Button btn="My Resume" />
+          </a>
         </div>
       </div>
     </section>
