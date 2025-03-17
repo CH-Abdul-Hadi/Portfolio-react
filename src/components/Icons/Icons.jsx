@@ -5,7 +5,7 @@ function Icons() {
   return (
     <footer className={style.icons}>
       <a
-        href="https://github.com/username"
+        href="https://github.com/CH-Abdul-Hadi"
         target="_blank"
         rel="noopener noreferrer"
         title="GitHub"
@@ -14,7 +14,7 @@ function Icons() {
         <FaGithub className={style.socialIcon} />
       </a>
       <a
-        href="https://linkedin.com/in/username"
+        href="www.linkedin.com/in/abdul-hadi-shahid-2b7a15271"
         target="_blank"
         rel="noopener noreferrer"
         title="LinkedIn"
@@ -23,7 +23,7 @@ function Icons() {
         <FaLinkedin className={style.socialIcon} />
       </a>
       <a
-        href="https://wa.me/phonenumber"
+        href="https://wa.me/+923279058035"
         target="_blank"
         rel="noopener noreferrer"
         title="WhatsApp"

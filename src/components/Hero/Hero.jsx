@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import styleTextColor from "../Contact/Contact.module.css";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import resume from "../../assets/Resume.pdf";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -68,7 +69,7 @@ function Hero() {
           <a href="#contact">
             <Button btn="Contact Me" />
           </a>
-          <Button btn="My Resume" />
+          <Button btn="My Resume" file={resume} />
         </div>
       </div>
     </section>
