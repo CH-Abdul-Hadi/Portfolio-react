@@ -10,9 +10,14 @@ import techpro from "../../assets/techpro.webp";
 import rps from "../../assets/rps.webp";
 import tictac from "../../assets/tictac.webp";
 import Button2 from "../Button2/Button2";
+import age from "../../assets/agecal.webp";
+import calculator from "../../assets/calculator.webp";
+import clock from "../../assets/clock.webp";
+import password from "../../assets/password.webp";
+import wordcount from "../../assets/wordcount.webp";
 
 const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(4);
+  const [activeIndex, setActiveIndex] = useState(7);
 
   const slides = [
     {
@@ -21,6 +26,7 @@ const Slider = () => {
       para: "A modern website for a tech company.",
       src: "https://tech-repo.vercel.app/",
     },
+
     {
       image: foodpanda,
       title: "FoodPanda Clone",
@@ -33,6 +39,36 @@ const Slider = () => {
       title: "Rock Paper Scissors",
       para: "A fun and interactive rock-paper-scissors.",
       src: "https://rock-paper-scissors-xi-lilac.vercel.app/",
+    },
+    {
+      image: age,
+      title: "Age Calculator",
+      para: "A simple tool to calculate your age accurately based on your date of birth.",
+      src: "https://age-calculator-chi-one.vercel.app/",
+    },
+    {
+      image: clock,
+      title: "Digital Clock",
+      para: "A modern digital clock displaying real-time updates.",
+      src: "https://digital-clock-one-omega.vercel.app/",
+    },
+    {
+      image: calculator,
+      title: "Online Calculator",
+      para: "A functional calculator for performing basic arithmetic operations.",
+      src: "https://calculator-tawny-sigma.vercel.app/",
+    },
+    {
+      image: password,
+      title: "Secure Password Generator",
+      para: "A tool to generate strong and secure passwords for better online safety",
+      src: "https://random-password-brown.vercel.app/",
+    },
+    {
+      image: wordcount,
+      title: "Word Counter",
+      para: "A simple tool to count words and characters in your text.",
+      src: "https://word-counter-theta-taupe.vercel.app/",
     },
 
     {
