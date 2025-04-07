@@ -37,6 +37,7 @@
   max-width: 250px;
   height: auto;
   border-radius: 1rem;
+  border: 2px solid wheat;
   margin: 0 auto;
 }
 
@@ -59,7 +60,8 @@
   margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(102, 102, 102, 0.226);
+  box-shadow: 0 6px 9px rgba(102, 102, 102, 0.226);
+  border: 2px solid rgba(245, 222, 179, 0.733);
 }
 
 .skillimg {

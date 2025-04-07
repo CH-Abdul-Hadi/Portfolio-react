@@ -14,7 +14,7 @@
 .profileImg {
   width: 10rem;
   height: 10rem;
-  border: none;
+  border: 2px solid wheat;
   border-radius: 50rem;
   -webkit-border-radius: 50rem;
   -moz-border-radius: 50rem;

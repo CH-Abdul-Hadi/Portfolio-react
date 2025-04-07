@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Loader2 from "./components/Loader2/Loader2";
+import Educations from './components/Educations/Educations.jsx'
 import "./index.css";
 import Footer from "./components/Footer/Footer";
 
@@ -30,6 +31,7 @@ function App() {
           <Navbar />
           <Hero />
           <AboutMe />
+          <Educations/>
           <Projects/>
           <Contact />
           <Footer/>

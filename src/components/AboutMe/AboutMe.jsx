@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 function AboutMe() {
   const aboutRef = useRef(null);
 
+  
   useEffect(() => {
     // Ensure animations run after DOM is fully loaded
     const ctx = gsap.context(() => {
@@ -34,7 +35,6 @@ function AboutMe() {
         }
       );
 
-      // About main section
       gsap.fromTo(
         "#aboutMain",
         { opacity: 0, y: 100 },
