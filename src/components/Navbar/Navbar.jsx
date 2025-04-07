@@ -51,7 +51,7 @@ function Navbar() {
   return (
     <nav className={style.navbar}>
       <a href="#home" className={style.logo}>
-        <img src={logo} alt="Company Logo" className={style.logoImg} />
+        <img src={logo} loading="lazy" alt="Company Logo" className={style.logoImg} />
       </a>
 
       <div

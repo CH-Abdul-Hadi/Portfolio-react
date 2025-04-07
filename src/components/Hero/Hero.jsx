@@ -50,7 +50,13 @@ function Hero() {
   return (
     <section id="home">
       <div className={style.hero}>
-        <img ref={imgRef} src={profile} alt="" className={style.profileImg} />
+        <img
+          ref={imgRef}
+          loading="lazy"
+          src={profile}
+          alt=""
+          className={style.profileImg}
+        />
         <h1>
           I'm{" "}
           <span

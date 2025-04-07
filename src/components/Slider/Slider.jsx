@@ -156,7 +156,7 @@ const Slider = () => {
       {slides.map((slide, index) => (
         <div key={index} className="item" style={calculateStyle(index)}>
           <div className="image-container">
-            <img src={slide.image} alt={slide.title} />
+            <img src={slide.image} loading="lazy" alt={slide.title} />
           </div>
           <div className="content">
             <h2>{slide.title}</h2>

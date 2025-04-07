@@ -148,6 +148,7 @@ function AboutMe() {
         <div className={style.aboutMain} id="aboutMain">
           <img
             src={profileImg}
+            loading="lazy"
             height={250}
             id="aboutImg"
             className={style.aboutImg}
