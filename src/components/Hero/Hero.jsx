@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import styleTextColor from "../Contact/Contact.module.css";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-import resume from "../../assets/Resume.pdf";
+import resume from "../../assets/newResume.pdf";
 
 gsap.registerPlugin(TextPlugin);
 
